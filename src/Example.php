@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 final class Example
 {
-    public function helloWorld(): string
+    public function helloWorld(): void
     {
         echo "Hello World!";
     }
