@@ -1,0 +1,38 @@
+{
+    "name": "mh-playground/ci-tests",
+    "description": "CI testing.",
+    "type": "library",
+    "keywords": ["tests"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.93",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5",
+        "szepeviktor/phpstan-wordpress": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Playground\\Ci\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Playground\\Ci\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "phpstan": "phpstan analyse --memory-limit=1G",
+        "phpunit": "phpunit"
+    }
+}
