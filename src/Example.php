@@ -8,6 +8,6 @@ final class Example
 {
     public function helloWorld(): void
     {
-        echo "Hello World!";
+        echo 'Hello World!';
     }
 }
