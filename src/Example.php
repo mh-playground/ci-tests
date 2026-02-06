@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Playground\Ci\Example;
+namespace Playground\Ci;
 
 final class Example
 {
