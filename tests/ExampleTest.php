@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Playground\Ci\Tests\ExampleTest;
 
 use PHPUnit\Framework\TestCase;
-use Playground\Ci\Example\Example;
+use Playground\Ci\Example;
 
 /**
  * @covers \Playground\Ci\Example\Example
