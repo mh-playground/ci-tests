@@ -1,6 +1,6 @@
 <?php
 
-namespace Playground\Ci\ExampleTest;
+namespace Playground\Ci\Tests\ExampleTest;
 
 use PHPUnit\Framework\TestCase;
 
