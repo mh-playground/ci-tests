@@ -1,0 +1,34 @@
+name: Stale Issues and Pull Requests
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  stale:
+    name: Stale Issues and Pull Requests
+
+    runs-on: ubuntu-latest
+
+    if: github.repository == 'mh-playground/ci-tests'
+
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Mark stale issues and pull requests
+        uses: actions/stale@v10
+        with:
+          days-before-stale: 2
+          days-before-close: 1
+          stale-issue-label: stale
+          stale-pr-label: stale
+          only-labels: 'needs info'
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had any recent activity. It will be closed in 7 days if no further activity occurs. Thank you for your contributions.'
+          close-issue-message: 'This issue has been automatically closed due to inactivity. Feel free to reopen it if it is still relevant.'
+          stale-pr-message: 'This pull request has been automatically marked as stale because it has not had any recent activity. It will be closed in 7 days if no further activity occurs. Thank you for your contributions.'
+          close-pr-message: 'This pull request has been automatically closed due to inactivity. Feel free to reopen it if it is still relevant.'
