@@ -23,7 +23,7 @@ jobs:
       - name: Mark stale issues and pull requests
         uses: actions/stale@v10
         with:
-          days-before-stale: 2
+          days-before-stale: 1
           days-before-close: 1
           stale-issue-label: stale
           stale-pr-label: stale
